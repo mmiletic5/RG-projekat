@@ -29,8 +29,8 @@ void key_callback(GLFWwindow *window, int key, int scancode, int action, int mod
 unsigned int loadCubemap(vector<std::string> faces);
 
 // settings
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
+const unsigned int SCR_WIDTH = 1200;
+const unsigned int SCR_HEIGHT = 800;
 
 // camera
 
@@ -91,9 +91,13 @@ struct ProgramState {
     glm::vec3 karenPosition = glm::vec3(22.5f,-19.5f,15.0f);
     float karenScale = 0.5f;
 
+    //light settings
+    bool blinn = false;
+    bool blinnKeyPressed = false;
+
     PointLight pointLight;
     ProgramState()
-            : camera(glm::vec3(0.0f, 0.0f, 3.0f)) {}
+            : camera(glm::vec3(25.0f, -16.0f, 32.0f)) {}
 
     void SaveToFile(std::string filename);
 
@@ -238,7 +242,7 @@ int main() {
 
     PointLight& pointLight = programState->pointLight;
     pointLight.position = glm::vec3(4.0f, 4.0, 0.0);
-    pointLight.ambient = glm::vec3(7.0f, 7.0f, 7.0f);
+    pointLight.ambient = glm::vec3(4.0f, 4.0f, 4.0f);
     pointLight.diffuse = glm::vec3(0.6, 0.6, 0.6);
     pointLight.specular = glm::vec3(1.0, 1.0, 1.0);
 
@@ -364,6 +368,8 @@ int main() {
         ourShader.setVec3("dirLight.diffuse", glm::vec3(0.4f));
         ourShader.setVec3("dirLight.specular",glm::vec3(0.2f));
 
+        ourShader.setBool("blinn",programState->blinn);
+
         // render the loaded model
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate(model,
@@ -464,6 +470,9 @@ int main() {
         glfwPollEvents();
     }
 
+    glDeleteVertexArrays(1,&skyboxVAO);
+    glDeleteVertexArrays(1,&skyboxVBO);
+
     programState->SaveToFile("resources/program_state.txt");
     delete programState;
     ImGui_ImplOpenGL3_Shutdown();
@@ -489,7 +498,6 @@ void processInput(GLFWwindow *window) {
         programState->camera.ProcessKeyboard(LEFT, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         programState->camera.ProcessKeyboard(RIGHT, deltaTime);
-
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
@@ -591,6 +599,16 @@ void key_callback(GLFWwindow *window, int key, int scancode, int action, int mod
         } else {
             glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
         }
+    }
+
+    if(glfwGetKey(window,GLFW_KEY_B) == GLFW_PRESS and !programState->blinnKeyPressed)
+    {
+        programState->blinn = !programState->blinn;
+        programState->blinnKeyPressed = true;
+    }
+    if(glfwGetKey(window,GLFW_KEY_B) == GLFW_RELEASE)
+    {
+        programState->blinnKeyPressed = false;
     }
 }
 
