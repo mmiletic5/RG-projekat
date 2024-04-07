@@ -621,6 +621,8 @@ int main() {
 
     glDeleteVertexArrays(1,&skyboxVAO);
     glDeleteVertexArrays(1,&skyboxVBO);
+    glDeleteVertexArrays(1,&transparentVAO);
+    glDeleteVertexArrays(1,&transparentVBO);
 
     programState->SaveToFile("resources/program_state.txt");
     delete programState;
