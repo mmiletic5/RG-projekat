@@ -19,7 +19,7 @@ uniform mat4 view;
 uniform mat4 projection;
 
 uniform vec3 lightPos;
-uniform vec3 viewPos;
+uniform vec3 viewPosition;
 
 void main()
 {
@@ -31,9 +31,9 @@ void main()
     T = normalize(T - dot(T,N) * N);
     vec3 B = cross(N,T);
 
-    mat3 TBN = transpose(inverse(mat3(model)));
+    mat3 TBN = transpose(mat3(T,B,N));
     TangentLightPos = TBN * lightPos;
-    TangentViewPos = TBN * viewPos;
+    TangentViewPos = TBN * viewPosition;
     TangentFragPos = TBN * FragPos;
 
     gl_Position = projection * view * vec4(FragPos, 1.0);

@@ -55,7 +55,7 @@ vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
     if(blinn)
     {
         vec3 halfwayDir = normalize(lightDir+viewDir);
-        spec = pow(max(dot(normal1, halfwayDir), 0.0), material.shininess);
+        spec = pow(max(dot(normal, halfwayDir), 0.0), material.shininess);
     }
     else
     {
@@ -86,7 +86,7 @@ vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir)
     if(blinn)
     {
         vec3 halfwayDir = normalize(lightDir+viewDir);
-        spec = pow(max(dot(normal1, halfwayDir), 0.0), material.shininess);
+        spec = pow(max(dot(normal, halfwayDir), 0.0), material.shininess);
     }
     else
     {

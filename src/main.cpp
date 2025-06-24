@@ -361,6 +361,9 @@ int main() {
             };
     unsigned int cubemapTexture = loadCubemap(faces);
 
+    //skyboxShader.use();
+    //skyboxShader.setInt("skybox", 0);
+
 
     // render loop
 
@@ -491,7 +494,7 @@ int main() {
         }
 
 
-        // draw skybox
+        // draw skybox 
         glDepthMask(GL_FALSE);
         glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
         skyboxShader.use();
