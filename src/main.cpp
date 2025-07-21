@@ -534,6 +534,9 @@ int main()
     glDeleteVertexArrays(1, &transparentVAO);
     glDeleteVertexArrays(1, &transparentVBO);
 
+    glDeleteTextures(1, &cubemapTexture);
+    glDeleteTextures(1, &transparentTexture);
+
     programState->SaveToFile("resources/program_state.txt");
     delete programState;
     ImGui_ImplOpenGL3_Shutdown();
