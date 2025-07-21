@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['offmaxx_7266',['OffMaxX',['../structImGuiOldColumns.html#a19f636d31c2c93d1afe01d9484936b28',1,'ImGuiOldColumns']]],
+  ['offminx_7267',['OffMinX',['../structImGuiOldColumns.html#a7cbfefcc82a7ca3271c8c0c05cfe9ed4',1,'ImGuiOldColumns']]],
+  ['offset_7268',['Offset',['../structImGuiTabItem.html#ac09eeb85bebba09f18ac959bc32b5cef',1,'ImGuiTabItem::Offset()'],['../structImGuiStyleVarInfo.html#ae900d6a02166d3d0433c18b95aec10e8',1,'ImGuiStyleVarInfo::Offset()']]],
+  ['offsetnorm_7269',['OffsetNorm',['../structImGuiOldColumnData.html#a87f711016d4006d7fb9fa21815fe6f8f',1,'ImGuiOldColumnData']]],
+  ['offsetnormbeforeresize_7270',['OffsetNormBeforeResize',['../structImGuiOldColumnData.html#aacf1574d1907c9afaadd5a702d6803ef',1,'ImGuiOldColumnData']]],
+  ['offsets_7271',['Offsets',['../structImSpanAllocator.html#a480822668b44faa98ae0363765059c06',1,'ImSpanAllocator']]],
+  ['open_7272',['Open',['../structMyDocument.html#abe5ed4d7f257d5a2fe5cf2a1844b22f9',1,'MyDocument']]],
+  ['opencond_7273',['OpenCond',['../structImGuiNextItemData.html#ac9550c80e18abf14a4dffdca9211d719',1,'ImGuiNextItemData']]],
+  ['openframecount_7274',['OpenFrameCount',['../structImGuiPopupData.html#a31a882f4cd1e73543010c43d056e5edb',1,'ImGuiPopupData']]],
+  ['openmousepos_7275',['OpenMousePos',['../structImGuiPopupData.html#a9d48ffe56872b2e87bc220d619594a55',1,'ImGuiPopupData']]],
+  ['openparentid_7276',['OpenParentId',['../structImGuiPopupData.html#ace5fe62768d9020db88cbba81ca12ad5',1,'ImGuiPopupData']]],
+  ['openpopuppos_7277',['OpenPopupPos',['../structImGuiPopupData.html#a78925fbd1498d3b92037665535a7a8fc',1,'ImGuiPopupData']]],
+  ['openpopupstack_7278',['OpenPopupStack',['../structImGuiContext.html#a0f175fa6d802c77e1c3bda0555bffaef',1,'ImGuiContext']]],
+  ['openprev_7279',['OpenPrev',['../structMyDocument.html#a1537678ceac13d60a512bf63e2668745',1,'MyDocument']]],
+  ['openval_7280',['OpenVal',['../structImGuiNextItemData.html#a72e212148815fefe93e7a7723d5db97b',1,'ImGuiNextItemData']]],
+  ['outerangle_7281',['OuterAngle',['../structImGuiResizeBorderDef.html#a98a0fd1c91fa782c3c4d5093113b2fa9',1,'ImGuiResizeBorderDef']]],
+  ['outerrectclipped_7282',['OuterRectClipped',['../structImGuiWindow.html#ac3f0ac7cf4d8edb14a8e920e6831b4d8',1,'ImGuiWindow']]],
+  ['oversampleh_7283',['OversampleH',['../structImFontConfig.html#ab460df0d8019ffa8d124e8988c710910',1,'ImFontConfig']]],
+  ['oversamplev_7284',['OversampleV',['../structImFontConfig.html#a8018f84c60bfafb2b4629aeb77a047cb',1,'ImFontConfig']]],
+  ['owner_7285',['Owner',['../structImGuiContextHook.html#a7b6ce62215c093535dd36c4a1303befc',1,'ImGuiContextHook']]]
+];

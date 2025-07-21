@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['_5f_5fgl_5fh_5f_0',['__gl_h_',['../glad_8h.html#a48a8940dccea5b6219320face7198075',1,'glad.h']]],
+  ['_5f_5fhas_5finclude_1',['__has_include',['../cmake-build-debug_2CMakeFiles_23_823_82_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#ae5510d82e4946f1656f4969911c54736',1,'__has_include():&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-debug_2CMakeFiles_23_823_82_2CompilerIdC_2CMakeCCompilerId_8c.html#ae5510d82e4946f1656f4969911c54736',1,'__has_include():&#160;CMakeCCompilerId.c'],['../build_2Desktop__Qt__6__6__3__GCC__64bit-Debug_2CMakeFiles_23_829_83_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#ae5510d82e4946f1656f4969911c54736',1,'__has_include():&#160;CMakeCXXCompilerId.cpp'],['../build_2Desktop__Qt__6__6__3__GCC__64bit-Debug_2CMakeFiles_23_829_83_2CompilerIdC_2CMakeCCompilerId_8c.html#ae5510d82e4946f1656f4969911c54736',1,'__has_include():&#160;CMakeCCompilerId.c'],['../build_2CMakeFiles_23_822_81_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#ae5510d82e4946f1656f4969911c54736',1,'__has_include():&#160;CMakeCXXCompilerId.cpp'],['../build_2CMakeFiles_23_822_81_2CompilerIdC_2CMakeCCompilerId_8c.html#ae5510d82e4946f1656f4969911c54736',1,'__has_include():&#160;CMakeCCompilerId.c']]],
+  ['_5f_5fstb_5finclude_5fstb_5ftruetype_5fh_5f_5f_2',['__STB_INCLUDE_STB_TRUETYPE_H__',['../imstb__truetype_8h.html#a793c93dc8e39787cf5966bec548730d5',1,'imstb_truetype.h']]],
+  ['_5fchannels_3',['_Channels',['../structImDrawListSplitter.html#ab3b0bdddacaa7b347c41735c2d9952dc',1,'ImDrawListSplitter']]],
+  ['_5fclearfreememory_4',['_ClearFreeMemory',['../structImDrawList.html#a61a886a16655c810e04c0ccebb228f9a',1,'ImDrawList']]],
+  ['_5fcliprectstack_5',['_ClipRectStack',['../structImDrawList.html#ae950024f053f3c94dc2c763d20be609d',1,'ImDrawList']]],
+  ['_5fcmdbuffer_6',['_CmdBuffer',['../structImDrawChannel.html#a8bb018bc09e2a1f4389c78390a437f78',1,'ImDrawChannel']]],
+  ['_5fcmdheader_7',['_CmdHeader',['../structImDrawList.html#a87d1ec89ec6a742fd4d097d2b924e92b',1,'ImDrawList']]],
+  ['_5fcount_8',['_Count',['../structImDrawListSplitter.html#ae3a1593ee05bc52e6284943eab3c97a2',1,'ImDrawListSplitter']]],
+  ['_5fcurrent_9',['_Current',['../structImDrawListSplitter.html#a99a46d62e09810f31d0a6efd4a0d2b09',1,'ImDrawListSplitter']]],
+  ['_5fdata_10',['_Data',['../structImDrawList.html#a606bbd354211fe6f84cc11ebe53e7903',1,'ImDrawList']]],
+  ['_5fgrow_5fcapacity_11',['_grow_capacity',['../structImVector.html#a3a097635d464b1b70dc7d59996a88b28',1,'ImVector']]],
+  ['_5fidxbuffer_12',['_IdxBuffer',['../structImDrawChannel.html#abf48aaacbb4908d4b1ff8b54ee85a45f',1,'ImDrawChannel']]],
+  ['_5fidxwriteptr_13',['_IdxWritePtr',['../structImDrawList.html#a771f4c7f71873852fe030c3e498e5843',1,'ImDrawList']]],
+  ['_5fonchangedcliprect_14',['_OnChangedClipRect',['../structImDrawList.html#a8e51ddbe1f9732bc271ce807bec23f54',1,'ImDrawList']]],
+  ['_5fonchangedtextureid_15',['_OnChangedTextureID',['../structImDrawList.html#a7c14ae666a0df75214ecb97cdb9bd8f4',1,'ImDrawList']]],
+  ['_5fonchangedvtxoffset_16',['_OnChangedVtxOffset',['../structImDrawList.html#a7f2e315f147acd8b555d86d1557659cc',1,'ImDrawList']]],
+  ['_5fownername_17',['_OwnerName',['../structImDrawList.html#a643f385fb9d5fc35a431e72a10a212f5',1,'ImDrawList']]],
+  ['_5fpath_18',['_Path',['../structImDrawList.html#a5bdc39abf351360500048628b8dc1b07',1,'ImDrawList']]],
+  ['_5fpopunuseddrawcmd_19',['_PopUnusedDrawCmd',['../structImDrawList.html#a2cb0295fcd3062bfedbebbad55865455',1,'ImDrawList']]],
+  ['_5fresetfornewframe_20',['_ResetForNewFrame',['../structImDrawList.html#a5f78fe195b2507e5926560f591141ff3',1,'ImDrawList']]],
+  ['_5fsplitter_21',['_Splitter',['../structImDrawList.html#a2893207705100e8a5da8122da56bd162',1,'ImDrawList']]],
+  ['_5ftextureidstack_22',['_TextureIdStack',['../structImDrawList.html#a848faddd121da050214b8d8159e5e704',1,'ImDrawList']]],
+  ['_5fvtxcurrentidx_23',['_VtxCurrentIdx',['../structImDrawList.html#a2228793183665bc3d8612795555fe505',1,'ImDrawList']]],
+  ['_5fvtxwriteptr_24',['_VtxWritePtr',['../structImDrawList.html#a67f870f5140bf1cab14b8515b7386073',1,'ImDrawList']]]
+];

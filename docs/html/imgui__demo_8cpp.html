@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RG-projekat: libs/imgui/src/imgui_demo.cpp Референца датотеке</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RG-projekat
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Направљено помоћу Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Тражи','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Тражи');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_6c6f1b2dc68b9dcc3983194cd4dedcc7.html">imgui</a></li><li class="navelem"><a class="el" href="dir_def1fb38ad6b1f12ff1e86be3eafca4b.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Класе</a> &#124;
+<a href="#define-members">Дефиниције</a>  </div>
+  <div class="headertitle">
+<div class="title">imgui_demo.cpp Референца датотеке</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="imgui_8h_source.html">imgui.h</a>&quot;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;limits.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Дијаграм зависности укључивања за imgui_demo.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="imgui__demo_8cpp__incl.png" border="0" usemap="#alibs_2imgui_2src_2imgui__demo_8cpp" alt=""/></div>
+<map name="alibs_2imgui_2src_2imgui__demo_8cpp" id="alibs_2imgui_2src_2imgui__demo_8cpp">
+<area shape="rect" title=" " alt="" coords="502,5,653,47"/>
+<area shape="rect" href="imgui_8h.html" title=" " alt="" coords="259,95,330,121"/>
+<area shape="rect" title=" " alt="" coords="354,95,425,121"/>
+<area shape="rect" title=" " alt="" coords="449,95,519,121"/>
+<area shape="rect" title=" " alt="" coords="543,95,611,121"/>
+<area shape="rect" title=" " alt="" coords="636,95,703,121"/>
+<area shape="rect" title=" " alt="" coords="727,95,798,121"/>
+<area shape="rect" title=" " alt="" coords="822,95,893,121"/>
+<area shape="rect" href="imconfig_8h.html" title=" " alt="" coords="5,169,96,196"/>
+<area shape="rect" title=" " alt="" coords="121,169,183,196"/>
+<area shape="rect" title=" " alt="" coords="208,169,283,196"/>
+<area shape="rect" title=" " alt="" coords="307,169,381,196"/>
+<area shape="rect" title=" " alt="" coords="406,169,477,196"/>
+<area shape="rect" title=" " alt="" coords="501,169,576,196"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Класе</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExampleAppConsole.html">ExampleAppConsole</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExampleAppLog.html">ExampleAppLog</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMyDocument.html">MyDocument</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExampleAppDocuments.html">ExampleAppDocuments</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Дефиниције</h2></td></tr>
+<tr class="memitem:a1bfa04d9a2431433f9668c814fd4c3d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__demo_8cpp.html#a1bfa04d9a2431433f9668c814fd4c3d5">IM_NEWLINE</a>&#160;&#160;&#160;&quot;\n&quot;</td></tr>
+<tr class="separator:a1bfa04d9a2431433f9668c814fd4c3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25a13a96600f1a018104f6c2d3da645"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__demo_8cpp.html#af25a13a96600f1a018104f6c2d3da645">IM_MIN</a>(A,  B)&#160;&#160;&#160;(((A) &lt; (B)) ? (A) : (B))</td></tr>
+<tr class="separator:af25a13a96600f1a018104f6c2d3da645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0693fad89638629beea97300c8f8f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__demo_8cpp.html#a9d0693fad89638629beea97300c8f8f6">IM_MAX</a>(A,  B)&#160;&#160;&#160;(((A) &gt;= (B)) ? (A) : (B))</td></tr>
+<tr class="separator:a9d0693fad89638629beea97300c8f8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d1e4d29150e7587f99e0723493a004"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__demo_8cpp.html#a25d1e4d29150e7587f99e0723493a004">IM_CLAMP</a>(V,  MN,  MX)&#160;&#160;&#160;((V) &lt; (MN) ? (MN) : (V) &gt; (MX) ? (MX) : (V))</td></tr>
+<tr class="separator:a25d1e4d29150e7587f99e0723493a004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a504542c4837c193bd5e54911123fe1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__demo_8cpp.html#a3a504542c4837c193bd5e54911123fe1">IMGUI_CDECL</a></td></tr>
+<tr class="separator:a3a504542c4837c193bd5e54911123fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Документација дефиниције</h2>
+<a id="a25d1e4d29150e7587f99e0723493a004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d1e4d29150e7587f99e0723493a004">&#9670;&nbsp;</a></span>IM_CLAMP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IM_CLAMP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">V, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">MN, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">MX&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((V) &lt; (MN) ? (MN) : (V) &gt; (MX) ? (MX) : (V))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d0693fad89638629beea97300c8f8f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d0693fad89638629beea97300c8f8f6">&#9670;&nbsp;</a></span>IM_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IM_MAX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">A, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">B&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((A) &gt;= (B)) ? (A) : (B))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af25a13a96600f1a018104f6c2d3da645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af25a13a96600f1a018104f6c2d3da645">&#9670;&nbsp;</a></span>IM_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IM_MIN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">A, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">B&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((A) &lt; (B)) ? (A) : (B))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bfa04d9a2431433f9668c814fd4c3d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bfa04d9a2431433f9668c814fd4c3d5">&#9670;&nbsp;</a></span>IM_NEWLINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IM_NEWLINE&#160;&#160;&#160;&quot;\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a504542c4837c193bd5e54911123fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a504542c4837c193bd5e54911123fe1">&#9670;&nbsp;</a></span>IMGUI_CDECL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IMGUI_CDECL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Направљено помоћу&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

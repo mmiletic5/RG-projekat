@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RG-projekat: include/rg/Camera.h Изворна датотека</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RG-projekat
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Направљено помоћу Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Тражи','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Тражи');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d0889f98d167fe543cc4f7b7c8f8b1e7.html">rg</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Camera.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Camera_8h.html">Иди на документацију овог фајла.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by matf-rg on 15.11.20..</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef PROJECT_BASE_CAMERA_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define PROJECT_BASE_CAMERA_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;glm/gtc/matrix_transform.hpp&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">   11</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaaa26736999186daf8146f809e863712a1">   12</a></span>&#160;    <a class="code" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaaa26736999186daf8146f809e863712a1">FORWARD</a>,</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaafed2fca77e454294d6b8bda1bf2c9fd6">   13</a></span>&#160;    <a class="code" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaafed2fca77e454294d6b8bda1bf2c9fd6">BACKWARD</a>,</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065">   14</a></span>&#160;    <a class="code" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065">LEFT</a>,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38">   16</a></span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span><a class="code" href="classCamera.html">Camera</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> updateCameraVectors() {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        glm::vec3 front;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        front.x = cos(glm::radians(<a class="code" href="classCamera.html#a1a1354a2bd2df7f18ef82924e671d241">Yaw</a>)) * cos(glm::radians(<a class="code" href="classCamera.html#af9c8f223bb06bb74fc77c586545e7e67">Pitch</a>));</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        front.y = sin(glm::radians(<a class="code" href="classCamera.html#af9c8f223bb06bb74fc77c586545e7e67">Pitch</a>));</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        front.z = sin(glm::radians(<a class="code" href="classCamera.html#a1a1354a2bd2df7f18ef82924e671d241">Yaw</a>)) * cos(glm::radians(<a class="code" href="classCamera.html#af9c8f223bb06bb74fc77c586545e7e67">Pitch</a>));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classCamera.html#ac95b3737115ffe9a6ff9128344d5b963">Front</a> = glm::normalize(front);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classCamera.html#a6624f9f4228f6299a3d4ccb81e28da0a">Right</a> = glm::normalize(glm::cross(<a class="code" href="classCamera.html#ac95b3737115ffe9a6ff9128344d5b963">Front</a>, <a class="code" href="classCamera.html#a340d30b833954b87fd016ce0e724c723">WorldUp</a>));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classCamera.html#ad74c4a490bc8865e67e27a2036d0a72d">Up</a> = glm::normalize(glm::cross(<a class="code" href="classCamera.html#a6624f9f4228f6299a3d4ccb81e28da0a">Right</a>, <a class="code" href="classCamera.html#ac95b3737115ffe9a6ff9128344d5b963">Front</a>));</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classCamera.html#a2becf27d08eb7e6da9c597c73ea95b5d">Zoom</a> = 45.f;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classCamera.html#a63221392d762df6a74f45bc9d43a2f61">MovementSpeed</a> = 2.5f;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classCamera.html#a1a1354a2bd2df7f18ef82924e671d241">Yaw</a> = -90.0f;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classCamera.html#af9c8f223bb06bb74fc77c586545e7e67">Pitch</a> = 0.0f;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classCamera.html#a73e88844b31d5111eeb76327dfbb2d68">MouseSensitivity</a> = 0.1f;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    glm::vec3 <a class="code" href="classCamera.html#a9733b59f5340f6f1bca24d52a6679039">Position</a> = glm::vec3(0.0f);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    glm::vec3 <a class="code" href="classCamera.html#a340d30b833954b87fd016ce0e724c723">WorldUp</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    glm::vec3 <a class="code" href="classCamera.html#ad74c4a490bc8865e67e27a2036d0a72d">Up</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    glm::vec3 <a class="code" href="classCamera.html#a6624f9f4228f6299a3d4ccb81e28da0a">Right</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    glm::vec3 <a class="code" href="classCamera.html#ac95b3737115ffe9a6ff9128344d5b963">Front</a> = glm::vec3(0, 0, -1);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">   41</a></span>&#160;    <a class="code" href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">Camera</a>() {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        updateCameraVectors();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classCamera.html#ac5be0b9a950effe0e5f5993c182c12da">   45</a></span>&#160;    glm::mat4 <a class="code" href="classCamera.html#ac5be0b9a950effe0e5f5993c182c12da">GetViewMatrix</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> glm::lookAt(<a class="code" href="classCamera.html#a9733b59f5340f6f1bca24d52a6679039">Position</a>, <a class="code" href="classCamera.html#a9733b59f5340f6f1bca24d52a6679039">Position</a> + <a class="code" href="classCamera.html#ac95b3737115ffe9a6ff9128344d5b963">Front</a>, <a class="code" href="classCamera.html#ad74c4a490bc8865e67e27a2036d0a72d">Up</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classCamera.html#acf795e5fc9dd77eb6258661b5e8137ad">   49</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCamera.html#acf795e5fc9dd77eb6258661b5e8137ad">ProcessKeyboard</a>(<a class="code" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction, <span class="keywordtype">float</span> <a class="code" href="main_8cpp.html#a1a61318ed6aa02b4ff346e7eb8f68891">deltaTime</a>) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">float</span> velocity = <a class="code" href="classCamera.html#a63221392d762df6a74f45bc9d43a2f61">MovementSpeed</a> * <a class="code" href="main_8cpp.html#a1a61318ed6aa02b4ff346e7eb8f68891">deltaTime</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;       <span class="keywordflow">switch</span> (direction) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;           <span class="keywordflow">case</span> <a class="code" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaaa26736999186daf8146f809e863712a1">FORWARD</a>: {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;              <a class="code" href="classCamera.html#a9733b59f5340f6f1bca24d52a6679039">Position</a> += <a class="code" href="classCamera.html#ac95b3737115ffe9a6ff9128344d5b963">Front</a> * velocity;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;           }<span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;           <span class="keywordflow">case</span> <a class="code" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaafed2fca77e454294d6b8bda1bf2c9fd6">BACKWARD</a>: {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <a class="code" href="classCamera.html#a9733b59f5340f6f1bca24d52a6679039">Position</a> -= <a class="code" href="classCamera.html#ac95b3737115ffe9a6ff9128344d5b963">Front</a> * velocity;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;           }<span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;           <span class="keywordflow">case</span> <a class="code" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065">LEFT</a>: {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <a class="code" href="classCamera.html#a9733b59f5340f6f1bca24d52a6679039">Position</a> -= <a class="code" href="classCamera.html#a6624f9f4228f6299a3d4ccb81e28da0a">Right</a> * velocity;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;           }<span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;           <span class="keywordflow">case</span> <a class="code" href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38">RIGHT</a>: {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <a class="code" href="classCamera.html#a9733b59f5340f6f1bca24d52a6679039">Position</a> += <a class="code" href="classCamera.html#a6624f9f4228f6299a3d4ccb81e28da0a">Right</a> * velocity;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;           }<span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;       }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classCamera.html#a12293c3b3d9d162523c94afadb1c11c4">   67</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a12293c3b3d9d162523c94afadb1c11c4">ProcessMouseMovement</a>(<span class="keywordtype">float</span> <a class="code" href="glad_8h.html#ac20a0ffebf4c476650fcfa0633066f0e">xoffset</a>, <span class="keywordtype">float</span> <a class="code" href="glad_8h.html#a76dfb6803dcff61037ba688b7f4242b8">yoffset</a>, <span class="keywordtype">bool</span> constrainPitch = <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="glad_8h.html#ac20a0ffebf4c476650fcfa0633066f0e">xoffset</a> *= <a class="code" href="classCamera.html#a73e88844b31d5111eeb76327dfbb2d68">MouseSensitivity</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="glad_8h.html#a76dfb6803dcff61037ba688b7f4242b8">yoffset</a> *= <a class="code" href="classCamera.html#a73e88844b31d5111eeb76327dfbb2d68">MouseSensitivity</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classCamera.html#a1a1354a2bd2df7f18ef82924e671d241">Yaw</a> += <a class="code" href="glad_8h.html#ac20a0ffebf4c476650fcfa0633066f0e">xoffset</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="classCamera.html#af9c8f223bb06bb74fc77c586545e7e67">Pitch</a> += <a class="code" href="glad_8h.html#a76dfb6803dcff61037ba688b7f4242b8">yoffset</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> (constrainPitch) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classCamera.html#af9c8f223bb06bb74fc77c586545e7e67">Pitch</a> &gt; 89.0f) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <a class="code" href="classCamera.html#af9c8f223bb06bb74fc77c586545e7e67">Pitch</a> = 89.0f;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classCamera.html#af9c8f223bb06bb74fc77c586545e7e67">Pitch</a> &lt; -89.0f) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <a class="code" href="classCamera.html#af9c8f223bb06bb74fc77c586545e7e67">Pitch</a> = -89.0f;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        updateCameraVectors();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classCamera.html#a05d150f7dc98940d2dd62f686cc2efe3">   85</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a05d150f7dc98940d2dd62f686cc2efe3">ProcessMouseScroll</a>(<span class="keywordtype">float</span> <a class="code" href="glad_8h.html#a76dfb6803dcff61037ba688b7f4242b8">yoffset</a>) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="classCamera.html#a2becf27d08eb7e6da9c597c73ea95b5d">Zoom</a> -= <a class="code" href="glad_8h.html#a76dfb6803dcff61037ba688b7f4242b8">yoffset</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classCamera.html#a2becf27d08eb7e6da9c597c73ea95b5d">Zoom</a> &lt; 1.0f) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="classCamera.html#a2becf27d08eb7e6da9c597c73ea95b5d">Zoom</a> = 1.0f;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classCamera.html#a2becf27d08eb7e6da9c597c73ea95b5d">Zoom</a> &gt; 45.0f) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="classCamera.html#a2becf27d08eb7e6da9c597c73ea95b5d">Zoom</a> = 45.0f;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//PROJECT_BASE_CAMERA_H</span></div>
+<div class="ttc" id="aCamera_8h_html_a224b9163917ac32fc95a60d8c1eec3aa"><div class="ttname"><a href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a></div><div class="ttdeci">Direction</div><div class="ttdef"><b>Definition:</b> Camera.h:11</div></div>
+<div class="ttc" id="aCamera_8h_html_a224b9163917ac32fc95a60d8c1eec3aaaa26736999186daf8146f809e863712a1"><div class="ttname"><a href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaaa26736999186daf8146f809e863712a1">FORWARD</a></div><div class="ttdeci">@ FORWARD</div><div class="ttdef"><b>Definition:</b> Camera.h:12</div></div>
+<div class="ttc" id="aCamera_8h_html_a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065"><div class="ttname"><a href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065">LEFT</a></div><div class="ttdeci">@ LEFT</div><div class="ttdef"><b>Definition:</b> Camera.h:14</div></div>
+<div class="ttc" id="aCamera_8h_html_a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38"><div class="ttname"><a href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div><div class="ttdeci">@ RIGHT</div><div class="ttdef"><b>Definition:</b> Camera.h:15</div></div>
+<div class="ttc" id="aCamera_8h_html_a224b9163917ac32fc95a60d8c1eec3aaafed2fca77e454294d6b8bda1bf2c9fd6"><div class="ttname"><a href="Camera_8h.html#a224b9163917ac32fc95a60d8c1eec3aaafed2fca77e454294d6b8bda1bf2c9fd6">BACKWARD</a></div><div class="ttdeci">@ BACKWARD</div><div class="ttdef"><b>Definition:</b> Camera.h:13</div></div>
+<div class="ttc" id="aclassCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> camera.h:28</div></div>
+<div class="ttc" id="aclassCamera_html_a01f94c3543f56ede7af49dc778f19331"><div class="ttname"><a href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">Camera::Camera</a></div><div class="ttdeci">Camera()</div><div class="ttdef"><b>Definition:</b> Camera.h:41</div></div>
+<div class="ttc" id="aclassCamera_html_a05d150f7dc98940d2dd62f686cc2efe3"><div class="ttname"><a href="classCamera.html#a05d150f7dc98940d2dd62f686cc2efe3">Camera::ProcessMouseScroll</a></div><div class="ttdeci">void ProcessMouseScroll(float yoffset)</div><div class="ttdef"><b>Definition:</b> Camera.h:85</div></div>
+<div class="ttc" id="aclassCamera_html_a12293c3b3d9d162523c94afadb1c11c4"><div class="ttname"><a href="classCamera.html#a12293c3b3d9d162523c94afadb1c11c4">Camera::ProcessMouseMovement</a></div><div class="ttdeci">void ProcessMouseMovement(float xoffset, float yoffset, bool constrainPitch=true)</div><div class="ttdef"><b>Definition:</b> Camera.h:67</div></div>
+<div class="ttc" id="aclassCamera_html_a1a1354a2bd2df7f18ef82924e671d241"><div class="ttname"><a href="classCamera.html#a1a1354a2bd2df7f18ef82924e671d241">Camera::Yaw</a></div><div class="ttdeci">float Yaw</div><div class="ttdef"><b>Definition:</b> camera.h:37</div></div>
+<div class="ttc" id="aclassCamera_html_a2becf27d08eb7e6da9c597c73ea95b5d"><div class="ttname"><a href="classCamera.html#a2becf27d08eb7e6da9c597c73ea95b5d">Camera::Zoom</a></div><div class="ttdeci">float Zoom</div><div class="ttdef"><b>Definition:</b> camera.h:42</div></div>
+<div class="ttc" id="aclassCamera_html_a340d30b833954b87fd016ce0e724c723"><div class="ttname"><a href="classCamera.html#a340d30b833954b87fd016ce0e724c723">Camera::WorldUp</a></div><div class="ttdeci">glm::vec3 WorldUp</div><div class="ttdef"><b>Definition:</b> camera.h:35</div></div>
+<div class="ttc" id="aclassCamera_html_a63221392d762df6a74f45bc9d43a2f61"><div class="ttname"><a href="classCamera.html#a63221392d762df6a74f45bc9d43a2f61">Camera::MovementSpeed</a></div><div class="ttdeci">float MovementSpeed</div><div class="ttdef"><b>Definition:</b> camera.h:40</div></div>
+<div class="ttc" id="aclassCamera_html_a6624f9f4228f6299a3d4ccb81e28da0a"><div class="ttname"><a href="classCamera.html#a6624f9f4228f6299a3d4ccb81e28da0a">Camera::Right</a></div><div class="ttdeci">glm::vec3 Right</div><div class="ttdef"><b>Definition:</b> camera.h:34</div></div>
+<div class="ttc" id="aclassCamera_html_a73e88844b31d5111eeb76327dfbb2d68"><div class="ttname"><a href="classCamera.html#a73e88844b31d5111eeb76327dfbb2d68">Camera::MouseSensitivity</a></div><div class="ttdeci">float MouseSensitivity</div><div class="ttdef"><b>Definition:</b> camera.h:41</div></div>
+<div class="ttc" id="aclassCamera_html_a9733b59f5340f6f1bca24d52a6679039"><div class="ttname"><a href="classCamera.html#a9733b59f5340f6f1bca24d52a6679039">Camera::Position</a></div><div class="ttdeci">glm::vec3 Position</div><div class="ttdef"><b>Definition:</b> camera.h:31</div></div>
+<div class="ttc" id="aclassCamera_html_ac5be0b9a950effe0e5f5993c182c12da"><div class="ttname"><a href="classCamera.html#ac5be0b9a950effe0e5f5993c182c12da">Camera::GetViewMatrix</a></div><div class="ttdeci">glm::mat4 GetViewMatrix() const</div><div class="ttdef"><b>Definition:</b> Camera.h:45</div></div>
+<div class="ttc" id="aclassCamera_html_ac95b3737115ffe9a6ff9128344d5b963"><div class="ttname"><a href="classCamera.html#ac95b3737115ffe9a6ff9128344d5b963">Camera::Front</a></div><div class="ttdeci">glm::vec3 Front</div><div class="ttdef"><b>Definition:</b> camera.h:32</div></div>
+<div class="ttc" id="aclassCamera_html_acf795e5fc9dd77eb6258661b5e8137ad"><div class="ttname"><a href="classCamera.html#acf795e5fc9dd77eb6258661b5e8137ad">Camera::ProcessKeyboard</a></div><div class="ttdeci">void ProcessKeyboard(Direction direction, float deltaTime)</div><div class="ttdef"><b>Definition:</b> Camera.h:49</div></div>
+<div class="ttc" id="aclassCamera_html_ad74c4a490bc8865e67e27a2036d0a72d"><div class="ttname"><a href="classCamera.html#ad74c4a490bc8865e67e27a2036d0a72d">Camera::Up</a></div><div class="ttdeci">glm::vec3 Up</div><div class="ttdef"><b>Definition:</b> camera.h:33</div></div>
+<div class="ttc" id="aclassCamera_html_af9c8f223bb06bb74fc77c586545e7e67"><div class="ttname"><a href="classCamera.html#af9c8f223bb06bb74fc77c586545e7e67">Camera::Pitch</a></div><div class="ttdeci">float Pitch</div><div class="ttdef"><b>Definition:</b> camera.h:38</div></div>
+<div class="ttc" id="aglad_8h_html_a76dfb6803dcff61037ba688b7f4242b8"><div class="ttname"><a href="glad_8h.html#a76dfb6803dcff61037ba688b7f4242b8">yoffset</a></div><div class="ttdeci">GLint GLint GLint yoffset</div><div class="ttdef"><b>Definition:</b> glad.h:1123</div></div>
+<div class="ttc" id="aglad_8h_html_ac20a0ffebf4c476650fcfa0633066f0e"><div class="ttname"><a href="glad_8h.html#ac20a0ffebf4c476650fcfa0633066f0e">xoffset</a></div><div class="ttdeci">GLint GLint xoffset</div><div class="ttdef"><b>Definition:</b> glad.h:1120</div></div>
+<div class="ttc" id="amain_8cpp_html_a1a61318ed6aa02b4ff346e7eb8f68891"><div class="ttname"><a href="main_8cpp.html#a1a61318ed6aa02b4ff346e7eb8f68891">deltaTime</a></div><div class="ttdeci">float deltaTime</div><div class="ttdef"><b>Definition:</b> main.cpp:45</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Направљено помоћу&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
