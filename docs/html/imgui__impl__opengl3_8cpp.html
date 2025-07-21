@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RG-projekat: libs/imgui/src/imgui_impl_opengl3.cpp Референца датотеке</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RG-projekat
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Направљено помоћу Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Тражи','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Тражи');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_6c6f1b2dc68b9dcc3983194cd4dedcc7.html">imgui</a></li><li class="navelem"><a class="el" href="dir_def1fb38ad6b1f12ff1e86be3eafca4b.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функције</a>  </div>
+  <div class="headertitle">
+<div class="title">imgui_impl_opengl3.cpp Референца датотеке</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="imgui_8h_source.html">imgui.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="imgui__impl__opengl3_8h_source.html">imgui_impl_opengl3.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Дијаграм зависности укључивања за imgui_impl_opengl3.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="imgui__impl__opengl3_8cpp__incl.png" border="0" usemap="#alibs_2imgui_2src_2imgui__impl__opengl3_8cpp" alt=""/></div>
+<map name="alibs_2imgui_2src_2imgui__impl__opengl3_8cpp" id="alibs_2imgui_2src_2imgui__impl__opengl3_8cpp">
+<area shape="rect" title=" " alt="" coords="351,5,502,47"/>
+<area shape="rect" href="imgui_8h.html" title=" " alt="" coords="259,169,330,196"/>
+<area shape="rect" href="imgui__impl__opengl3_8h.html" title=" " alt="" coords="273,95,439,121"/>
+<area shape="rect" title=" " alt="" coords="464,95,531,121"/>
+<area shape="rect" title=" " alt="" coords="555,95,626,121"/>
+<area shape="rect" href="imconfig_8h.html" title=" " alt="" coords="5,244,96,271"/>
+<area shape="rect" title=" " alt="" coords="121,244,183,271"/>
+<area shape="rect" title=" " alt="" coords="208,244,283,271"/>
+<area shape="rect" title=" " alt="" coords="307,244,381,271"/>
+<area shape="rect" title=" " alt="" coords="406,244,477,271"/>
+<area shape="rect" title=" " alt="" coords="501,244,576,271"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функције</h2></td></tr>
+<tr class="memitem:a0475f257dc97d1daceee89cb4b19744d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__impl__opengl3_8cpp.html#a0475f257dc97d1daceee89cb4b19744d">ImGui_ImplOpenGL3_Init</a> (const char *glsl_version)</td></tr>
+<tr class="separator:a0475f257dc97d1daceee89cb4b19744d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd53376e6135ad71e7bcd9879278e37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glad_8h.html#a950fc91edb4504f62f1c577bf4727c29">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__impl__opengl3_8cpp.html#acbd53376e6135ad71e7bcd9879278e37">ImGui_ImplOpenGL3_Shutdown</a> ()</td></tr>
+<tr class="separator:acbd53376e6135ad71e7bcd9879278e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a900e74add4e56e74f97a210eb329aa91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glad_8h.html#a950fc91edb4504f62f1c577bf4727c29">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__impl__opengl3_8cpp.html#a900e74add4e56e74f97a210eb329aa91">ImGui_ImplOpenGL3_NewFrame</a> ()</td></tr>
+<tr class="separator:a900e74add4e56e74f97a210eb329aa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad215190229f4f300593911aa7b3821de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glad_8h.html#a950fc91edb4504f62f1c577bf4727c29">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__impl__opengl3_8cpp.html#ad215190229f4f300593911aa7b3821de">ImGui_ImplOpenGL3_RenderDrawData</a> (<a class="el" href="structImDrawData.html">ImDrawData</a> *draw_data)</td></tr>
+<tr class="separator:ad215190229f4f300593911aa7b3821de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc4f80532d710de41d4075214eb363e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__impl__opengl3_8cpp.html#a3dc4f80532d710de41d4075214eb363e">ImGui_ImplOpenGL3_CreateFontsTexture</a> ()</td></tr>
+<tr class="separator:a3dc4f80532d710de41d4075214eb363e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a539aaad4aa185838297fb13b2409c405"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glad_8h.html#a950fc91edb4504f62f1c577bf4727c29">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__impl__opengl3_8cpp.html#a539aaad4aa185838297fb13b2409c405">ImGui_ImplOpenGL3_DestroyFontsTexture</a> ()</td></tr>
+<tr class="separator:a539aaad4aa185838297fb13b2409c405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27f12289d6fe9fcd412f92af280b398"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__impl__opengl3_8cpp.html#ab27f12289d6fe9fcd412f92af280b398">ImGui_ImplOpenGL3_CreateDeviceObjects</a> ()</td></tr>
+<tr class="separator:ab27f12289d6fe9fcd412f92af280b398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605e340c346791d9c9e927add2392d0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glad_8h.html#a950fc91edb4504f62f1c577bf4727c29">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imgui__impl__opengl3_8cpp.html#a605e340c346791d9c9e927add2392d0e">ImGui_ImplOpenGL3_DestroyDeviceObjects</a> ()</td></tr>
+<tr class="separator:a605e340c346791d9c9e927add2392d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Документација функције</h2>
+<a id="ab27f12289d6fe9fcd412f92af280b398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27f12289d6fe9fcd412f92af280b398">&#9670;&nbsp;</a></span>ImGui_ImplOpenGL3_CreateDeviceObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ImGui_ImplOpenGL3_CreateDeviceObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3dc4f80532d710de41d4075214eb363e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc4f80532d710de41d4075214eb363e">&#9670;&nbsp;</a></span>ImGui_ImplOpenGL3_CreateFontsTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ImGui_ImplOpenGL3_CreateFontsTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a605e340c346791d9c9e927add2392d0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a605e340c346791d9c9e927add2392d0e">&#9670;&nbsp;</a></span>ImGui_ImplOpenGL3_DestroyDeviceObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="glad_8h.html#a950fc91edb4504f62f1c577bf4727c29">void</a> ImGui_ImplOpenGL3_DestroyDeviceObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a539aaad4aa185838297fb13b2409c405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a539aaad4aa185838297fb13b2409c405">&#9670;&nbsp;</a></span>ImGui_ImplOpenGL3_DestroyFontsTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="glad_8h.html#a950fc91edb4504f62f1c577bf4727c29">void</a> ImGui_ImplOpenGL3_DestroyFontsTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0475f257dc97d1daceee89cb4b19744d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0475f257dc97d1daceee89cb4b19744d">&#9670;&nbsp;</a></span>ImGui_ImplOpenGL3_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ImGui_ImplOpenGL3_Init </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>glsl_version</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a900e74add4e56e74f97a210eb329aa91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a900e74add4e56e74f97a210eb329aa91">&#9670;&nbsp;</a></span>ImGui_ImplOpenGL3_NewFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="glad_8h.html#a950fc91edb4504f62f1c577bf4727c29">void</a> ImGui_ImplOpenGL3_NewFrame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad215190229f4f300593911aa7b3821de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad215190229f4f300593911aa7b3821de">&#9670;&nbsp;</a></span>ImGui_ImplOpenGL3_RenderDrawData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="glad_8h.html#a950fc91edb4504f62f1c577bf4727c29">void</a> ImGui_ImplOpenGL3_RenderDrawData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImDrawData.html">ImDrawData</a> *&#160;</td>
+          <td class="paramname"><em>draw_data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbd53376e6135ad71e7bcd9879278e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbd53376e6135ad71e7bcd9879278e37">&#9670;&nbsp;</a></span>ImGui_ImplOpenGL3_Shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="glad_8h.html#a950fc91edb4504f62f1c577bf4727c29">void</a> ImGui_ImplOpenGL3_Shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Направљено помоћу&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
