@@ -1,0 +1,78 @@
+# Build artifacts and temporary files
+# -----------------------------------
+build/
+*.a
+*.o
+*.obj
+*.core
+*.debug
+*.rej
+*.orig
+*.so
+*.so.*
+Makefile*
+tags
+.DS_Store
+.directory
+Thumbs.db
+
+# Generated files
+# ---------------
+*.autosave
+*.moc
+*.prl
+*_pch.h.cpp
+*_resource.rc
+*.res
+*.rc
+core
+!core/
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+/.qmake.cache
+/.qmake.stash
+
+# Qt Creator files
+# ----------------
+*.pro.user*
+CMakeLists.txt.user*
+*.qm
+
+# Temporary and backup files
+# --------------------------
+*~
+.#*
+*.*#
+*.flc
+.*.swp
+
+# Python bytecode files
+# ----------------------
+*.pyc
+
+# Visual Studio files
+# -------------------
+*.ib_pdb_index
+*.idb
+*.ilk
+*.pdb
+*.sln
+*.suo
+*.vcproj
+*vcproj.*.*.user
+*.ncb
+*.sdf
+*.opensdf
+*.vcxproj
+*vcxproj.*
+
+# MinGW files
+# -----------
+*.Debug
+*.Release
+
+# Binaries
+# --------
+*.dll
+*.exe

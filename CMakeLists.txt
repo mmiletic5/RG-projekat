@@ -17,11 +17,14 @@ list(APPEND CMAKE_CXX_FLAGS "-Wall -Wextra -Wno-unused-variable -Wno-unused-para
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
 file(GLOB SOURCES "src/*.cpp" "src/*.c" src/main.cpp)
+message(STATUS "SOURCES found: ${SOURCES}")
 file(GLOB HEADERS "include/*.h" "include/*.hpp")
+message(STATUS "SOURCES found: ${SOURCES}")
 
 find_package(OpenGL REQUIRED)
 find_package(GLFW3 REQUIRED)
 find_package(ASSIMP REQUIRED)
+find_package(glm REQUIRED)
 
 add_subdirectory(libs/glad)
 add_subdirectory(libs/imgui)

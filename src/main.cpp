@@ -85,9 +85,9 @@ struct ProgramState {
     glm::vec3 spongePosition = glm::vec3(-4.0f,-19.4f,-9.0f);
     float spongeScale = 4.0f;
 
-    glm::vec3 krustyPosition = glm::vec3(28.5f,-19.5f,5.0f);
+    /*glm::vec3 krustyPosition = glm::vec3(28.5f,-19.5f,5.0f);
     float krustyScale = 0.5f;
-
+*/
     glm::vec3 krabsPosition = glm::vec3(28.5f,-19.5f,15.0f);
     float krabsScale = 2.0f;
 
@@ -233,11 +233,11 @@ int main() {
     Model sponge("resources/objects/sponge/sponge.obj");
     sponge.SetShaderTextureNamePrefix("material.");
 
-    stbi_set_flip_vertically_on_load(false);
+/*    stbi_set_flip_vertically_on_load(false);
     Model krusty("resources/objects/krusty/krusty.obj");
     krusty.SetShaderTextureNamePrefix("material.");
     stbi_set_flip_vertically_on_load(true);
-
+*/
     Model krabs("resources/objects/krabs/krabs.obj");
     krabs.SetShaderTextureNamePrefix("material.");
 
@@ -459,13 +459,13 @@ int main() {
         sponge.Draw(ourShader);
         glDisable(GL_CULL_FACE);
 
-        // render the krusty model
+        /*// render the krusty model
         model = glm::mat4(1.0f);
         model = glm::translate(model,programState->krustyPosition); // translate it down so it's at the center of the scene
         model = glm::scale(model, glm::vec3(programState->krustyScale));    // it's a bit too big for our scene, so scale it down
         ourShader.setMat4("model", model);
         krusty.Draw(ourShader);
-
+*/
         // render the krabs model
         model = glm::mat4(1.0f);
         model = glm::translate(model,programState->krabsPosition); // translate it down so it's at the center of the scene
@@ -617,9 +617,9 @@ void DrawImGui(ProgramState *programState) {
         ImGui::DragFloat3("Sponge position", (float*)&programState->spongePosition);
         ImGui::DragFloat("Sponge scale", &programState->spongeScale, 0.05, 0.1, 4.0);
 
-        ImGui::DragFloat3("Krusty position", (float*)&programState->krustyPosition);
+       /* ImGui::DragFloat3("Krusty position", (float*)&programState->krustyPosition);
         ImGui::DragFloat("Krusty scale", &programState->krustyScale, 0.05, 0.1, 4.0);
-
+*/
         ImGui::DragFloat3("Krabs position", (float*)&programState->krabsPosition);
         ImGui::DragFloat("Krabs scale", &programState->krabsScale, 0.05, 0.1, 4.0);
 
@@ -708,7 +708,7 @@ unsigned int loadTexture(char const * path)
     unsigned char *data = stbi_load(path, &width, &height, &nrComponents, 0);
     if (data)
     {
-        GLenum format;
+        GLenum format = GL_RGB; //izmenio
         if (nrComponents == 1)
             format = GL_RED;
         else if (nrComponents == 3)
