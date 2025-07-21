@@ -12,8 +12,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Patrick_Body_baseColor.png
 
 newmtl Patrick_Body
@@ -27,8 +25,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Patrick_Body_baseColor.png
 
 newmtl Road
@@ -42,8 +38,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Sand_baseColor.png
 
 newmtl Rocks_Texture
@@ -57,8 +51,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Rocks_Texture_baseColor.png
 
 newmtl Sand
@@ -72,8 +64,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Sand_baseColor.png
 
 newmtl Spongebob_Body
@@ -87,8 +77,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Spongebob_Body_baseColor.png
 
 newmtl Spongebob_Door
@@ -102,8 +90,6 @@ Pm 1.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Spongebob_Body_baseColor.png
 
 newmtl Spongebob_Eyes
@@ -117,8 +103,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Spongebob_Body_baseColor.png
 
 newmtl Spongebob_Glass
@@ -132,8 +116,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 Tf 0.311230 0.311230 0.311230
 map_Kd Spongebob_Body_baseColor.png
 
@@ -148,8 +130,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Spongebob_Body_baseColor.png
 
 newmtl Spongebob_Pipe
@@ -163,8 +143,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Spongebob_Body_baseColor.png
 
 newmtl Spongebob_Rocks
@@ -178,8 +156,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Spongebob_Rocks_baseColor.png
 
 newmtl Squidward_Body
@@ -193,8 +169,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Squidward_Body_baseColor.png
 
 newmtl Squidward_Boulders
@@ -208,8 +182,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Squidward_Boulders_baseColor.png
 
 newmtl Squidward_Door
@@ -223,8 +195,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Squidward_Body_baseColor.png
 
 newmtl Squidward_Eyes
@@ -238,8 +208,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd Squidward_Body_baseColor.png
 
 newmtl Squidward_Glass
@@ -253,7 +221,5 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 Tf 0.888847 0.888847 0.888847
 map_Kd Squidward_Body_baseColor.png

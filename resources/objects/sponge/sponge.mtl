@@ -12,8 +12,6 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd wire_028149177_baseColor.png
 
 newmtl wire_087225087
@@ -27,6 +25,4 @@ Pm 0.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd wire_028149177_baseColor.png
