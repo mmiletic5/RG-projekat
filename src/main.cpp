@@ -179,7 +179,6 @@ auto main() -> int
     stbi_set_flip_vertically_on_load(true);
 
     programState = new ProgramState;
-    programState->LoadFromFile("resources/program_state.txt");
     if (programState->ImGuiEnabled)
     {
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
