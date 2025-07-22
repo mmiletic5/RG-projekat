@@ -26,9 +26,9 @@ void processInput(GLFWwindow* window);
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
-unsigned int loadCubemap(vector<std::string> faces);
+auto loadCubemap(vector<std::string> faces) -> unsigned int;
 
-unsigned int loadTexture(const char* path);
+auto loadTexture(const char* path) -> unsigned int;
 
 // settings
 const unsigned int SCR_WIDTH = 1200;
@@ -137,7 +137,7 @@ ProgramState* programState;
 
 void DrawImGui(ProgramState* programState);
 
-int main()
+auto main() -> int
 {
     // glfw: initialize and configure
 
@@ -152,8 +152,8 @@ int main()
 
     // glfw window creation
 
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
-    if (window == NULL)
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", nullptr, nullptr);
+    if (window == nullptr)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -267,7 +267,7 @@ int main()
     glBindBuffer(GL_ARRAY_BUFFER, transparentVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(transparentVertices), transparentVertices, GL_STATIC_DRAW);
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)nullptr);
     glEnableVertexAttribArray(1);
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
     glBindVertexArray(0);
@@ -311,7 +311,7 @@ int main()
     glBindBuffer(GL_ARRAY_BUFFER, skyboxVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), &skyboxVertices, GL_STATIC_DRAW);
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)nullptr);
 
     stbi_set_flip_vertically_on_load(false);
 
@@ -494,10 +494,10 @@ int main()
         blendingShader.setMat4("view", view);
         glBindVertexArray(transparentVAO);
         glBindTexture(GL_TEXTURE_2D, transparentTexture);
-        for (unsigned int i = 0; i < vegetation.size(); i++)
+        for (auto & i : vegetation)
         {
             model = glm::mat4(1.0f);
-            model = glm::translate(model, vegetation[i]);
+            model = glm::translate(model, i);
             blendingShader.setMat4("model", model);
             glDrawArrays(GL_TRIANGLES, 0, 6);
         }
@@ -687,7 +687,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     }
 }
 
-unsigned int loadCubemap(vector<std::string> faces)
+auto loadCubemap(vector<std::string> faces) -> unsigned int
 {
     unsigned int textureID;
     glGenTextures(1, &textureID);
@@ -719,7 +719,7 @@ unsigned int loadCubemap(vector<std::string> faces)
     return textureID;
 }
 
-unsigned int loadTexture(char const* path)
+auto loadTexture(char const* path) -> unsigned int
 {
     unsigned int textureID;
     glGenTextures(1, &textureID);
