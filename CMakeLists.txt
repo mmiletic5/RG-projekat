@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.11)
 set(PROJECT_NAME project_base)
 project(${PROJECT_NAME})
 
+option(ENABLE_COVERAGE "Enable gcov coverage reporting" OFF)
+
 function(watch)
     set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS ${ARGV})
 endfunction()
@@ -12,13 +14,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
-
 file(GLOB SOURCES "src/*.cpp" "src/*.c" "src/main.cpp" "libs/stb_image.cpp")
 message(STATUS "SOURCES found: ${SOURCES}")
 
 list(APPEND SOURCES libs/stb_image.cpp)
 set_source_files_properties(libs/stb_image.cpp PROPERTIES COMPILE_FLAGS "-Wno-shift-negative-value -Wno-implicit-fallthrough")
-
 
 file(GLOB HEADERS "include/*.h" "include/*.hpp")
 message(STATUS "HEADERS found: ${HEADERS}")
@@ -52,10 +52,22 @@ target_include_directories(${PROJECT_NAME}
         ${CMAKE_BINARY_DIR}/configuration
 )
 
-target_compile_options(${PROJECT_NAME}
-    PRIVATE
-        -g -Wall -Wextra -Wno-unused-variable -Wno-unused-parameter -O3
-)
+if(ENABLE_COVERAGE)
+    message(STATUS "Building with GCov coverage flags")
+    target_compile_options(${PROJECT_NAME}
+        PRIVATE
+            -g -O0 --coverage -Wall -Wextra -Wno-unused-variable -Wno-unused-parameter
+    )
+    target_link_options(${PROJECT_NAME}
+        PRIVATE
+            --coverage
+    )
+else()
+    target_compile_options(${PROJECT_NAME}
+        PRIVATE
+            -g -O3 -Wall -Wextra -Wno-unused-variable -Wno-unused-parameter
+    )
+endif()
 
 target_compile_definitions(${PROJECT_NAME}
     PRIVATE
