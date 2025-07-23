@@ -1,8 +1,0 @@
-<map id="ImFontAtlas" name="ImFontAtlas">
-<area shape="rect" id="node1" title=" " alt="" coords="385,113,485,140"/>
-<area shape="rect" id="node2" href="$structImVector.html" title=" " alt="" coords="33,5,200,32"/>
-<area shape="rect" id="node3" href="$structImVec2.html" title=" " alt="" coords="81,63,152,89"/>
-<area shape="rect" id="node4" href="$structImVec4.html" title=" " alt="" coords="81,113,152,140"/>
-<area shape="rect" id="node5" href="$structImVector.html" title=" " alt="" coords="19,164,215,191"/>
-<area shape="rect" id="node6" href="$structImVector.html" title=" " alt="" coords="5,215,228,257"/>
-</map>

@@ -1,7 +1,0 @@
-var searchData=
-[
-  ['apientry_8627',['APIENTRY',['../glad_8h.html#a428a91acf2c2439dc1a257708ee1f805',1,'glad.h']]],
-  ['apientryp_8628',['APIENTRYP',['../glad_8h.html#aef0d9e5e275e1b7becf54b6aa9ce3911',1,'glad.h']]],
-  ['architecture_5fid_8629',['ARCHITECTURE_ID',['../build_2CMakeFiles_23_822_81_2CompilerIdC_2CMakeCCompilerId_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../build_2CMakeFiles_23_822_81_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp'],['../build_2Desktop__Qt__6__6__3__GCC__64bit-Debug_2CMakeFiles_23_829_83_2CompilerIdC_2CMakeCCompilerId_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../build_2Desktop__Qt__6__6__3__GCC__64bit-Debug_2CMakeFiles_23_829_83_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-debug_2CMakeFiles_23_823_82_2CompilerIdC_2CMakeCCompilerId_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../cmake-build-debug_2CMakeFiles_23_823_82_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp']]],
-  ['assert_8630',['ASSERT',['../Error_8h.html#aebf3e0e3e5266f0edeefdd7192cace84',1,'Error.h']]]
-];
