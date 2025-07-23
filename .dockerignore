@@ -1,0 +1,7 @@
+build/
+*.o
+*.user
+*.pro.user
+*.pro.user.*
+.git
+
