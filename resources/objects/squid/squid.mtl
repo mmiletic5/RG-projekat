@@ -12,8 +12,6 @@ Pm 0.700000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd 02_-_Default_baseColor.png
 
 newmtl 03_-_Default
@@ -27,8 +25,6 @@ Pm 0.324886
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd 03_-_Default_baseColor.png
 
 newmtl 07_-_Default
@@ -42,8 +38,6 @@ Pm 0.700000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd 07_-_Default_baseColor.png
 
 newmtl 08_-_Default
@@ -57,8 +51,6 @@ Pm 1.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd 08_-_Default_baseColor.png
 
 newmtl 09_-_Default
@@ -72,8 +64,6 @@ Pm 0.440739
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd 09_-_Default_baseColor.png
 
 newmtl 13_-_Default
@@ -87,6 +77,4 @@ Pm 1.000000
 Ps 0.000000
 Pc 0.000000
 Pcr 0.000000
-aniso 0.000000
-anisor 0.000000
 map_Kd 13_-_Default_baseColor.png

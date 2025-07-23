@@ -2,24 +2,26 @@ cmake_minimum_required(VERSION 3.11)
 set(PROJECT_NAME project_base)
 project(${PROJECT_NAME})
 
+option(ENABLE_COVERAGE "Enable gcov coverage reporting" OFF)
+
 function(watch)
-    set_property(
-            DIRECTORY
-            APPEND
-            PROPERTY CMAKE_CONFIGURE_DEPENDS ${ARGV}
-    )
+    set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS ${ARGV})
 endfunction()
 
 set(CMAKE_POLICY_DEFAULT_CMP0012 NEW)
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-list(APPEND CMAKE_CXX_FLAGS "-Wall -Wextra -Wno-unused-variable -Wno-unused-parameter -O3")
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
-file(GLOB SOURCES "src/*.cpp" "src/*.c" src/main.cpp)
+file(GLOB SOURCES "src/*.cpp" "src/*.c" "src/main.cpp" "libs/stb_image.cpp")
 message(STATUS "SOURCES found: ${SOURCES}")
+
+list(APPEND SOURCES libs/stb_image.cpp)
+set_source_files_properties(libs/stb_image.cpp PROPERTIES COMPILE_FLAGS "-Wno-shift-negative-value -Wno-implicit-fallthrough")
+
 file(GLOB HEADERS "include/*.h" "include/*.hpp")
-message(STATUS "SOURCES found: ${SOURCES}")
+message(STATUS "HEADERS found: ${HEADERS}")
 
 find_package(OpenGL REQUIRED)
 find_package(GLFW3 REQUIRED)
@@ -29,33 +31,57 @@ find_package(glm REQUIRED)
 add_subdirectory(libs/glad)
 add_subdirectory(libs/imgui)
 
-add_definitions(${OPENGL_DEFINITIONS})
-
-add_library(STB_IMAGE libs/stb_image.cpp)
-set_source_files_properties(libs/stb_image.cpp include/stb_image.h
-        PROPERTIES
-        COMPILE_FLAGS
-        "-Wno-shift-negative-value -Wno-implicit-fallthrough")
-
-set(LIBS glfw glad OpenGL::GL X11 Xrandr Xinerama Xi Xxf86vm Xcursor dl pthread freetype ${ASSIMP_LIBRARIES} STB_IMAGE imgui)
-
+set(LIBS
+    glfw
+    glad
+    OpenGL::GL
+    X11 Xrandr Xinerama Xi Xxf86vm Xcursor
+    dl pthread freetype
+    ${ASSIMP_LIBRARIES}
+    imgui
+)
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
-include_directories(${CMAKE_BINARY_DIR}/configuration)
 
+add_executable(${PROJECT_NAME} ${SOURCES})
 
-include_directories(include/)
-add_executable(${PROJECT_NAME}
-        ${SOURCES})
+target_include_directories(${PROJECT_NAME}
+    PRIVATE
+        include/
+        libs/
+        ${CMAKE_BINARY_DIR}/configuration
+)
+
+if(ENABLE_COVERAGE)
+    message(STATUS "Building with GCov coverage flags")
+    target_compile_options(${PROJECT_NAME}
+        PRIVATE
+            -g -O0 --coverage -Wall -Wextra -Wno-unused-variable -Wno-unused-parameter
+    )
+    target_link_options(${PROJECT_NAME}
+        PRIVATE
+            --coverage
+    )
+else()
+    target_compile_options(${PROJECT_NAME}
+        PRIVATE
+            -g -O3 -Wall -Wextra -Wno-unused-variable -Wno-unused-parameter
+    )
+endif()
+
+target_compile_definitions(${PROJECT_NAME}
+    PRIVATE
+        ${OPENGL_DEFINITIONS}
+)
 
 target_link_libraries(${PROJECT_NAME} ${LIBS})
 
-# set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}")
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}")
-file(GLOB SHADERS "shaders/*.vs"
-        "shaders/*.fs")
-foreach(SHADER ${SHADERS})
-    # file(COPY ${SHADER} DESTINATION ${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}/shaders)
-    watch(${SHADER})
-endforeach()
 
+file(GLOB SHADERS "shaders/*.vs" "shaders/*.fs")
+foreach(SHADER ${SHADERS})
+    watch(${SHADER})
+    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/shaders
+        COMMAND ${CMAKE_COMMAND} -E copy ${SHADER} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/shaders)
+endforeach()
