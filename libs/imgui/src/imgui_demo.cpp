@@ -1513,7 +1513,7 @@ static void ShowDemoWindowWidgets()
                 // Return 0 (pass) if the character is 'i' or 'm' or 'g' or 'u' or 'i'
                 static auto FilterImGuiLetters(ImGuiInputTextCallbackData* data) -> int
                 {
-                    if (data->EventChar < 256 && strchr("imgui", (char)data->EventChar))
+                    if (data->EventChar >= 0 && data->EventChar < 256 && strchr("imgui", (char)data->EventChar))
                         return 0;
                     return 1;
                 }

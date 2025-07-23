@@ -100,14 +100,14 @@ struct ProgramState
     bool blinnKeyPressed = false;
 
     PointLight pointLight;
-    ProgramState() : camera(glm::vec3(25.0f, -16.0f, 32.0f)) {}
+    ProgramState() : camera(glm::vec3(25.0f, -16.0f, 32.0f)),pointLight() {}
 
-    void SaveToFile(std::string filename);
+    void SaveToFile(std::string filename) const;
 
     void LoadFromFile(std::string filename);
 };
 
-void ProgramState::SaveToFile(std::string filename)
+void ProgramState::SaveToFile(std::string filename) const
 {
     std::ofstream out(filename);
     out << clearColor.r << '\n'
